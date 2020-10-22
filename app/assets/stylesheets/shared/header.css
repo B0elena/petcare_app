@@ -1,0 +1,25 @@
+.page-header {
+  height: 100px;
+  background: whitesmoke;
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-content > h1 {
+  font-size: 30px;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.header-content > nav > ul {
+  display: flex;
+}
+
+.header-content > nav > ul > li {
+  padding-left: 50px;
+}
