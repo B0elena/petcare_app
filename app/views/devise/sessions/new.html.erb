@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+
+<main class="user-session-new">
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+    <%#= render "admins/shared/error_messages", resource: resource %>
+  <ul class="user-registrations-new-list">
+    <h1>ログイン</h1>
+    <li>
+      <div class="field">
+        <%= f.label :メールアドレス %>
+        <em>(必須)</em><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+    </li>
+    <li>
+      <div class="field">
+        <%= f.label :パスワード %>
+        <% if @minimum_password_length %>
+        <em>(必須<%= @minimum_password_length %> 文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+    </li>
+    <li>
+      <div class="actions">
+        <%= f.submit "ログイン" %>
+      </div>
+    </li>
+  </ul>
+  <% end %>
+</main>
+
+<%= render "shared/footer" %>

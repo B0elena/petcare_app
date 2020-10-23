@@ -18,8 +18,14 @@
 
 .header-content > nav > ul {
   display: flex;
+  list-style: none;
 }
 
 .header-content > nav > ul > li {
   padding-left: 50px;
+}
+
+.header-content > nav > ul > li > a {
+  color: #333;
+  text-decoration: none;
 }
