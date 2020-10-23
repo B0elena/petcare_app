@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+
+<main class="user-registrations-new">
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%#= render "admins/shared/error_messages", resource: resource %>
+  <ul class="user-registrations-new-list">
+    <h1>新規登録</h1>
+    <li>
+      <div class="field">
+        <%= f.label :ニックネーム %>
+        <em>(必須)</em><br />
+        <%= f.text_field :nickname, autofocus: true %>
+      </div>
+    </li>
+    <li>
+      <div class="field">
+        <%= f.label :メールアドレス %>
+        <em>(必須)</em><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+    </li>
+    <li>
+      <div class="field">
+        <%= f.label :パスワード %>
+        <% if @minimum_password_length %>
+        <em>(必須<%= @minimum_password_length %> 文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+    </li>
+    <li>
+      <div class="field">
+        <%= f.label :パスワードの確認 %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+    </li>
+    <li>
+      <div class="actions">
+        <%= f.submit "登録する" %>
+      </div>
+    </li>
+  </ul>
+  <% end %>
+</main>
+
+<%= render "shared/footer" %>
