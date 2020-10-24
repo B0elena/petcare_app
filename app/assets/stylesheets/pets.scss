@@ -1,14 +1,55 @@
+// ペット登録画面(new)
+.pet-new-content {
+  height: 600px;
+}
+// ペット登録画面
+
+// ペット一覧(index)
 .wapper {
   height: 600px;
   background-image: image-url("pet2.jpg");
   background-size: cover;
 }
 
-.pet-new-content {
-  height: 600px;
+.pet-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pet-list > li {
+  padding: 20px;
 }
 
 .pet-image {
   height: 200px;
   width: 200px;
 }
+// ペット一覧
+
+// ペット詳細(show)
+.show-pet-info {
+  display: flex;
+}
+
+.show-pet-image {
+  height: 450px;
+  width: 450px;
+  padding: 20px;
+}
+
+.show-pet-list-up {
+  padding: 20px;
+  color: #333;
+}
+
+.show-pet-list > li {
+}
+
+.show-pet-list-down {
+  padding: 20px;
+  color: #333;
+}
+
+.show-pet-list-down {
+}
+// ペット詳細

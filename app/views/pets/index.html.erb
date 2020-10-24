@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <main>
   <section class="wapper">
-    <ul class="">
+    <ul class="pet-list">
       <% @pets.each do |p| %>
         <li class="">
         <%= link_to pet_path(p.id) do %>

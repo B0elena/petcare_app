@@ -1,2 +1,22 @@
 <%= render "shared/header" %>
+<main>
+  <section class="show-pet-info">
+    <div>
+      <%= image_tag @pet.image, class: "show-pet-image" %>
+    </div>
+    <div>
+      <ul class="show-pet-list-up">
+        <li><%= @pet.petname %> ちゃん</li>
+        <li><%= @pet.sex.name %></li>
+        <li><%= @pet.kind %></li>
+      </ul>
+      <ul class="show-pet-list-down">
+        <li>〜月〜日</li>
+        <li>体重</li>
+        <li>ご飯の量</li>
+        <li>食べたご飯</li>
+      </ul>
+    </div>
+  </section>
+</main>
 <%= render "shared/footer" %>

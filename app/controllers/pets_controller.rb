@@ -17,6 +17,12 @@ class PetsController < ApplicationController
     end
   end
 
+  def show
+    @pet = Pet.find(params[:id])
+    #@comment = Comment.new
+    #@comments = @tweet.comments.includes(:user)
+  end
+
   private
   def move_to_index
     unless user_signed_in?
