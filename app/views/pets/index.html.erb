@@ -1,7 +1,17 @@
 <%= render "shared/header" %>
 <main>
   <section class="wapper">
-    
+    <ul class="">
+      <% @pets.each do |p| %>
+        <li class="">
+        <%= link_to pet_path(p.id) do %>
+          <div class="">
+            <%= image_tag p.image, class: "pet-image" %>
+          </div>
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
   </section>
 </main>
 <%= render "shared/footer" %>
