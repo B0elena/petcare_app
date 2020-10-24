@@ -1,7 +1,20 @@
 class PetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   def index
-    # @tweets = Tweet.all
+    @pets = Pet.all
+  end
+
+  def new
+    @pet = Pet.new
+  end 
+
+  def create
+    @pet = Pet.new(pet_params)
+    if @pet.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
@@ -9,5 +22,9 @@ class PetsController < ApplicationController
     unless user_signed_in?
       redirect_to root_path
     end
+  end
+
+  def pet_params
+    params.require(:pet).permit(:petname, :sex_id, :kind, :birthday, :image, :date).merge(user_id: current_user.id)
   end
 end
