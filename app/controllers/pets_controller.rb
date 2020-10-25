@@ -21,7 +21,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @management = Management.new
     #@managements = @pet.managements.includes(:user)
-    @data = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
+    @data = Management.all
   end
 
   private

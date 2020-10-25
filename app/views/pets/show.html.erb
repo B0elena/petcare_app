@@ -39,8 +39,16 @@
       <% end %>
     </div>
   </section>
-<div>
-  <%= line_chart @data, width: "800px", height: "500px" %>
-  </div>
+  <section>
+    <% if @date.present? %>
+    <% else %>
+      <div>体重
+        <%= line_chart @data.group_by_day(:to_day).sum(:weight), width: "90%", height: "300px", class: "" %>
+     </div>
+      <div>餌の量
+        <%= line_chart @data.group_by_day(:to_day).sum(:food), width: "90%", height: "300px", class: ""%>
+      </div>
+    <% end %>
+  </section>
 </main>
 <%= render "shared/footer" %>
