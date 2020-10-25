@@ -2,35 +2,44 @@
 <main>
   <section class="pet-new-content">
     <%= form_with model: @pet, local: true do |f| %>
+    <ul class="pet-new-list">
       <h1>ペットの登録</h1>
-      <div class="p-field">
-        <%= f.label :写真の選択 %><br />
-        <%= f.file_field :image %>
-      </div>
-      
-      <div class="p-field">
-        <%= f.label :名前 %><br />
-        <%= f.text_field :petname, class: "" %>
-      </div>
-
-      <div class="p-field">
-        <%= f.label :性別 %><br />
-        <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:""}) %>
-      </div>
-
-      <div class="p-field">
-        <%= f.label :種類 %><br />
-        <%= f.text_field :kind, class: "" %>
-      </div>
-
-      <div class="p-field">
-        <%= f.label :誕生日 %><br />
-        <%= f.date_select :birthday, :default => {:year => '2020', :month => '01', :day => '01'} %>
-      </div>
-
-      <div class="p-field">
-        <%= f.submit "登録する" %>
-      </div>
+      <li>
+        <div class="p-field">
+          <%= f.label :写真 %><br />
+          <%= f.file_field :image %>
+        </div>
+      </li>
+      <li>
+        <div class="p-field">
+          <%= f.label :名前 %><br />
+          <%= f.text_field :petname, class: "" %>
+        </div>
+      </li>
+      <li>
+        <div class="p-field">
+          <%= f.label :性別 %><br />
+          <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:""}) %>
+        </div>
+      </li>
+      <li>
+        <div class="p-field">
+          <%= f.label :種類 %><br />
+          <%= f.text_field :kind, class: "" %>
+        </div>
+      </li>
+      <li>
+        <div class="p-field">
+          <%= f.label :誕生日 %><br />
+          <%= f.date_select :birthday, :default => {:year => '2020', :month => '01', :day => '01'} %>
+        </div>
+      </li>
+      <li>
+        <div class="p-field">
+          <%= f.submit "登録する" %>
+        </div>
+      </li>
+    </ul>
     <% end %>
   </section>
 </main>

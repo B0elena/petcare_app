@@ -6,26 +6,25 @@
 
 .user-session-new {
   height: 600px;
-  background-image: image-url("pet1.jpg");
+  background-image: image-url("pet7.jpg");
   background-size: cover;
 }
 
 .user-registrations-new-list {
-  width: 30%;
+  height: 600px;
   padding: 50px 20px;
+  background: rgba(245, 245, 245, 0.5);
 }
 
 .user-registrations-new-list > h1 {
-  text-align: center;
   font-weight: bold;
   font-size: 20px;
 }
 
 .field {
-  text-align: center;
   margin: 10px; 
 }
 
 .actions {
-  text-align: center;
+  padding: 10px 0 0 130px;
 }

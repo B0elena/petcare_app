@@ -19,8 +19,8 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
-    #@comment = Comment.new
-    #@comments = @tweet.comments.includes(:user)
+    @management = Management.new
+    #@managements = @pet.managements.includes(:user)
   end
 
   private

@@ -10,12 +10,33 @@
         <li><%= @pet.sex.name %></li>
         <li><%= @pet.kind %></li>
       </ul>
+      <%= form_with(model: [@pet, @management], local: true) do |f| %>
       <ul class="show-pet-list-down">
-        <li>〜月〜日</li>
-        <li>体重</li>
-        <li>ご飯の量</li>
-        <li>食べたご飯</li>
+        <li>
+          <div class="s-field">
+            <%= f.label :日付 %><br />
+            <%= f.date_select :to_day, :default => {:year => '2020', :month => '01', :day => '01'} %>
+          </div>
+        </li>
+        <li>
+          <div class="s-field">
+            <%= f.label :体重 %><br />
+            <%= f.text_field :weight, class: "" %>
+          </div>
+        </li>
+        <li>
+          <div class="s-field">
+            <%= f.label :餌の量 %><br />
+            <%= f.text_field :food, class: "" %>
+          </div>
+        </li>
+        <li>
+          <div class="s-field">
+            <%= f.submit "記録する" %>
+          </div>
+        </li>
       </ul>
+      <% end %>
     </div>
   </section>
 </main>
