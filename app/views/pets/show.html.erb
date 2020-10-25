@@ -6,48 +6,54 @@
     </div>
     <div>
       <ul class="show-pet-list-up">
-        <li><%= @pet.petname %> ちゃん</li>
-        <li><%= @pet.sex.name %></li>
-        <li><%= @pet.kind %></li>
+        <li>名前　：<%= @pet.petname %> ちゃん</li>
+        <li>性別　：<%= @pet.sex.name %></li>
+        <li>種類　：<%= @pet.kind %></li>
       </ul>
-      <%= form_with(model: [@pet, @management], local: true) do |f| %>
-      <ul class="show-pet-list-down">
-        <li>
-          <div class="s-field">
-            <%= f.label :日付 %><br />
-            <%= f.date_select :to_day, :default => {:year => '2020', :month => '01', :day => '01'} %>
-          </div>
-        </li>
-        <li>
-          <div class="s-field">
-            <%= f.label :体重 %><br />
-            <%= f.text_field :weight, class: "" %>
-          </div>
-        </li>
-        <li>
-          <div class="s-field">
-            <%= f.label :餌の量 %><br />
-            <%= f.text_field :food, class: "" %>
-          </div>
-        </li>
-        <li>
-          <div class="s-field">
-            <%= f.submit "記録する" %>
-          </div>
-        </li>
-      </ul>
+      <% if user_signed_in? %>
+        <%= form_with(model: [@pet, @management], local: true) do |f| %>
+        <ul class="show-pet-list-down">
+          <li>
+            <div class="s-field">
+              <%= f.label :日付 %><br />
+              <%= f.date_select :to_day, :default => {:year => '2020', :month => '01', :day => '01'} %>
+            </div>
+          </li>
+          <li>
+            <div class="s-field">
+              <%= f.label :体重 %><br />
+              <%= f.text_field :weight, class: "" %>
+            </div>
+          </li>
+          <li>
+            <div class="s-field">
+              <%= f.label :餌の量 %><br />
+              <%= f.text_field :food, class: "" %>
+            </div>
+          </li>
+          <li>
+            <div class="s-field">
+              <%= f.submit "記録する" %>
+            </div>
+          </li>
+        </ul>
+        <% end %>
       <% end %>
     </div>
   </section>
   <section>
     <% if @date.present? %>
     <% else %>
-      <div>体重
-        <%= line_chart @data.group_by_day(:to_day).sum(:weight), width: "90%", height: "300px", class: "" %>
+    <div class="graph-date">
+      <div class="graph">
+        <h1>体重の変化</h1>
+        <%= line_chart @data.group_by_day(:to_day).sum(:weight), width: "98%", height: "300px" %>
      </div>
-      <div>餌の量
-        <%= line_chart @data.group_by_day(:to_day).sum(:food), width: "90%", height: "300px", class: ""%>
+      <div class="graph">
+        <h1>餌の量の変化</h1>
+        <%= line_chart @data.group_by_day(:to_day).sum(:food), width: "98%", height: "300px" %>
       </div>
+    </div>
     <% end %>
   </section>
 </main>
