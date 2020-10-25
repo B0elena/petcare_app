@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+Management.create(weight:'1880', food:'50',to_day:'2020-10-01', pet_id:'1')
+Management.create(weight:'1915', food:'50',to_day:'2020-10-02', pet_id:'1')
+Management.create(weight:'1882', food:'50',to_day:'2020-10-03', pet_id:'1')
+Management.create(weight:'1920', food:'50',to_day:'2020-10-04', pet_id:'1')
+Management.create(weight:'1896', food:'40',to_day:'2020-10-05', pet_id:'1')
+Management.create(weight:'1891', food:'40',to_day:'2020-10-06', pet_id:'1')
+Management.create(weight:'1920', food:'40',to_day:'2020-10-07', pet_id:'1')
+Management.create(weight:'1915', food:'30',to_day:'2020-10-08', pet_id:'1')
+Management.create(weight:'1905', food:'20',to_day:'2020-10-09', pet_id:'1')
+Management.create(weight:'1895', food:'50',to_day:'2020-10-10', pet_id:'1')
+Management.create(weight:'1907', food:'30',to_day:'2020-10-11', pet_id:'1')
+Management.create(weight:'1917', food:'20',to_day:'2020-10-12', pet_id:'1')
+Management.create(weight:'1911', food:'49',to_day:'2020-10-13', pet_id:'1')
+Management.create(weight:'1911', food:'38',to_day:'2020-10-14', pet_id:'1')
+Management.create(weight:'1907', food:'44',to_day:'2020-10-15', pet_id:'1')
+Management.create(weight:'1903', food:'21',to_day:'2020-10-16', pet_id:'1')
+Management.create(weight:'1920', food:'53',to_day:'2020-10-17', pet_id:'1')
+Management.create(weight:'1916', food:'39',to_day:'2020-10-18', pet_id:'1')
+Management.create(weight:'1921', food:'48',to_day:'2020-10-19', pet_id:'1')
+Management.create(weight:'1900', food:'32',to_day:'2020-10-20', pet_id:'1')
+Management.create(weight:'1890', food:'30',to_day:'2020-10-21', pet_id:'1')
+Management.create(weight:'1890', food:'40',to_day:'2020-10-22', pet_id:'1')
+Management.create(weight:'1902', food:'30',to_day:'2020-10-23', pet_id:'1')
+Management.create(weight:'1888', food:'20',to_day:'2020-10-24', pet_id:'1')
+Management.create(weight:'1858', food:'10',to_day:'2020-10-25', pet_id:'1')
