@@ -21,6 +21,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @management = Management.new
     #@managements = @pet.managements.includes(:user)
+    @data = Management.all
   end
 
   private

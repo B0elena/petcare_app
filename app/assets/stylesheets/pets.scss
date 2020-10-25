@@ -60,10 +60,13 @@
 
 .show-pet-list-up {
   padding: 20px;
+  margin: 10px;
   color: #333;
 }
 
-.show-pet-list > li {
+.show-pet-list-up > li {
+  padding: 10px;
+  border-bottom: 1px solid #333;
 }
 
 .show-pet-list-down {
@@ -71,6 +74,18 @@
   color: #333;
 }
 
-.show-pet-list-down {
+.show-pet-list-down > li {
+  padding: 10px;
+}
+
+.graph {
+  margin: 20px;
+  padding: 20px;
+}
+
+.graph >h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
 }
 // ペット詳細

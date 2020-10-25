@@ -1,7 +1,11 @@
 class ManagementsController < ApplicationController
   def create
-    management = Management.create(management_params)
-    redirect_to pet_path(management.pet.id)
+    management = Management.new(management_params)
+    if management.save
+      redirect_to pet_path(management.pet.id)
+    else
+      redirect_to pet_path(management.pet.id)
+    end
   end
 
   private
