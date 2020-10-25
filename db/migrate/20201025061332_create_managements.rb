@@ -1,6 +1,6 @@
-class CreateInformation < ActiveRecord::Migration[6.0]
+class CreateManagements < ActiveRecord::Migration[6.0]
   def change
-    create_table :information do |t|
+    create_table :managements do |t|
       t.integer    :weight, null: false
       t.integer    :food,   null: false
       t.date       :to_day, null: false
