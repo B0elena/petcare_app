@@ -50,7 +50,7 @@
         <%= line_chart @data.group_by_day(:to_day).sum(:weight), width: "98%", height: "300px" %>
      </div>
       <div class="graph">
-        <h1>餌の量の変化</h1>
+        <h1>ご飯の量の変化</h1>
         <%= line_chart @data.group_by_day(:to_day).sum(:food), width: "98%", height: "300px" %>
       </div>
     </div>

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :pets do
     resources :managements, only: :create
   end
+  resources :clinics, only: :index
 end

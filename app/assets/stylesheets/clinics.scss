@@ -1,0 +1,38 @@
+.clinic-main {
+  height: 600px;
+  display: flex;
+}
+
+.clinic-name {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 50px 10px 10px;
+}
+
+.clinic-time {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 10px;
+}
+
+.clinic-holiday {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 10px;
+}
+
+.clinic-url {
+  padding: 20px;
+}
+
+.clinic-url > div > a {
+  text-decoration: none;
+  color: rgb(97, 96, 96);
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.map {
+  padding: 30px 80px 50px;
+}

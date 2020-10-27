@@ -6,7 +6,7 @@
         <% if user_signed_in? %>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'ペット登録', new_pet_path %></li>
-          <li><%= link_to 'クリニック', "#" %></li>
+          <li><%= link_to 'クリニック', clinics_path %></li>
           <li><%= link_to 'ショップ', "#" %></li>
           <li><%= link_to 'お問い合わせ', "#" %></li>
         <% else %>
