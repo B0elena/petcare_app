@@ -1,0 +1,38 @@
+.shop-main {
+  height: 600px;
+  display: flex;
+}
+
+.shop-name {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 50px 10px 10px;
+}
+
+.shop-time {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 10px;
+}
+
+.shop-holiday {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin: 10px;
+}
+
+.shop-url {
+  padding: 20px;
+}
+
+.shop-url > div > a {
+  text-decoration: none;
+  color: rgb(97, 96, 96);
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.shop-map {
+  padding: 30px 80px 50px;
+}

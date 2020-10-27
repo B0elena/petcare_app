@@ -26,10 +26,20 @@
 // ペット登録画面
 
 // ペット一覧(index)
-.wapper {
+
+.wrapper-a {
   height: 600px;
   background-image: image-url("pet2.jpg");
   background-size: cover;
+}
+
+.wrapper-a > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background: rgba(245, 245, 245, 0.5);
 }
 
 .pet-list {
@@ -44,6 +54,12 @@
 .pet-image {
   height: 200px;
   width: 200px;
+}
+
+.wrapper-b > h1 {
+  margin: 20px 0 0 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 // ペット一覧
 
