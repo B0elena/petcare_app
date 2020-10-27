@@ -1,31 +1,31 @@
-.clinic-main {
+.shop-main {
   height: 600px;
   display: flex;
 }
 
-.clinic-name {
+.shop-name {
   padding: 10px;
   border-bottom: 1px solid #333;
   margin: 50px 10px 10px;
 }
 
-.clinic-time {
+.shop-time {
   padding: 10px;
   border-bottom: 1px solid #333;
   margin: 10px;
 }
 
-.clinic-holiday {
+.shop-holiday {
   padding: 10px;
   border-bottom: 1px solid #333;
   margin: 10px;
 }
 
-.clinic-url {
+.shop-url {
   padding: 20px;
 }
 
-.clinic-url > div > a {
+.shop-url > div > a {
   text-decoration: none;
   color: rgb(97, 96, 96);
   padding: 5px;
@@ -33,6 +33,6 @@
   border-radius: 5px;
 }
 
-.clinic-map {
+.shop-map {
   padding: 30px 80px 50px;
 }

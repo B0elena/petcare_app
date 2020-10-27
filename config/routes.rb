@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :managements, only: :create
   end
   resources :clinics, only: :index
+  resources :shops, only: :index
 end
